@@ -7,6 +7,8 @@ var btn = document.getElementById('button') ;
 var nameUser = document.getElementById('name');
 var ingredients = document.getElementsByClassName('ingredient-checkbox');
 var priceTotal = document.getElementById('price');
+var coupons = ['6454ASD4AS564D','D6AS5D4AS6','D65AS4D65AS4','54SD65ASSA'];
+var coupon = document.getElementById('coupon');
 
 
 
@@ -39,6 +41,17 @@ btn.addEventListener('click',
                         }
                     }
 
-                    priceTotal.innerHTML = price.toFixed(2);
+                    
+                var couponCode = coupon.value;
+
+                    if(coupons.includes(couponCode)){
+                        // console.log('ok coupon');
+                        price -= price * 0.2; 
+                        priceTotal.innerHTML = price.toFixed(2);
+                        alert('Congratulazioni , codice accettato , hai diritto ad uno sconto del 20%!!!!!');
+                    }else{
+                        // console.log('nope coupon');
+                        priceTotal.innerHTML = price.toFixed(2);
+                    }
                 }                         
             })
