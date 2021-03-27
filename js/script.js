@@ -11,6 +11,7 @@ var coupons = ['6454ASD4AS564D','D6AS5D4AS6','D65AS4D65AS4','54SD65ASSA'];
 var coupon = document.getElementById('coupon');
 var addBtn = document.getElementsByClassName('ingredient-add');
 var imgBtn = document.getElementsByClassName('ingredient-image');
+var yourBurger=document.getElementById('yourBurger');
 
 
 
@@ -44,6 +45,8 @@ btn.addEventListener('click',
                 }else{
                     // console.log('ok name is ' + nameBurger);
                     var price = 50;
+
+                    yourBurger.innerHTML = 'Name burger is: ' + nameBurger ;
 
                     for(var i = 0 ; i < ingredients.length; i++){
                         var ingredientCheck = ingredients[i];
