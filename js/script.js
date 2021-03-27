@@ -42,8 +42,8 @@ btn.addEventListener('click',
                 var nameBurger = nameUser.value.trim();
                 if(!isNaN(nameBurger) || (nameBurger.length === 0)){
                     alert('Attenzione , non hai inserito un nome per il tuo hamburger!!!');
-                }else if(nameBurger.length > 13){
-                       alert('Siamo spiacenti , ma il nome del suo Hamburger non può superare i 13 caratteri , prego riprovare, grazie.');
+                }else if(nameBurger.length > 16){
+                       alert('Siamo spiacenti , ma il nome del suo Hamburger non può superare i 16 caratteri , prego riprovare, grazie.');
                 } else{
                     // console.log('ok name is ' + nameBurger);
                     var price = 50;

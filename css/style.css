@@ -206,4 +206,11 @@ footer {
 .price-container {
   font-size: 200%;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
+.price-container h2{
+  font-size: 100%;
+  margin-right: 20px;
+}
+
