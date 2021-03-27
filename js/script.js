@@ -40,13 +40,16 @@ btn.addEventListener('click',
 
             function(){
                 var nameBurger = nameUser.value.trim();
-                if(!isNaN(nameBurger) || (nameBurger.length === 1)){
+                if(!isNaN(nameBurger) || (nameBurger.length === 0)){
                     alert('Attenzione , non hai inserito un nome per il tuo hamburger!!!');
-                }else{
+                }else if(nameBurger.length > 13){
+                       alert('Siamo spiacenti , ma il nome del suo Hamburger non può superare i 13 caratteri , prego riprovare, grazie.');
+                } else{
                     // console.log('ok name is ' + nameBurger);
                     var price = 50;
+                    console.log(nameBurger.length);
 
-                    yourBurger.innerHTML = 'Name burger is: ' + nameBurger ;
+                    yourBurger.innerHTML = 'Your : ' + nameBurger ;
 
                     for(var i = 0 ; i < ingredients.length; i++){
                         var ingredientCheck = ingredients[i];
@@ -72,5 +75,5 @@ btn.addEventListener('click',
                     }
                         // console.log('nope coupon');
                         priceTotal.innerHTML = price.toFixed(2);                  
-                }                         
+                }                        
             })
